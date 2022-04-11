@@ -1,0 +1,56 @@
+<mat-toolbar color="primary">
+  <span>読んだ本</span>
+  <span class="spacer"></span>
+  <span>一覧</span>
+</mat-toolbar>
+<mat-card class="book-register">
+  <mat-card-title>書籍登録</mat-card-title>
+  <div>
+    <mat-form-field class="book-box" appearance="fill">
+      <input matInput placeholder="書籍名" type="text">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="book-box" appearance="fill">
+      <textarea matInput placeholder="あらすじ" type="text"></textarea>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="評価点" type="text">
+    </mat-form-field>
+  </div>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="primary">追加</button>
+  </mat-card-actions>
+</mat-card>
+<mat-card class="library">
+  <mat-card-title>アンドロイドは電気羊の夢を見るか？</mat-card-title>
+  <mat-card-content>
+    <p>
+      第三次大戦後の未来、サンフランシスコを舞台に賞金稼ぎのリック・デッカードが、火星から逃亡してきた8体のアンドロイドを「処理」するというあらすじ
+    </p>
+    <p>
+      評価:90点
+    </p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="warn">消去</button>
+  </mat-card-actions>
+</mat-card>
+<mat-card class="library">
+  <mat-card-title>
+    任天堂の元社長、岩田聡さんのことばをまとめた本
+  </mat-card-title>
+  <mat-card-content>
+    <p>
+      任天堂の元社長、岩田聡さんのことばをまとめた本
+    </p>
+    <p>
+      評価:90点
+    </p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="warn">消去</button>
+  </mat-card-actions>
+</mat-card>
