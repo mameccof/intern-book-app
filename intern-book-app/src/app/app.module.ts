@@ -12,13 +12,13 @@ import {MatButtonModule} from '@angular/material/button';
 import { ListComponent } from './pages/list/list.component';
 import { AppRoutingModule } from './app-routing.module';
 
-
-
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent
+    ListComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
