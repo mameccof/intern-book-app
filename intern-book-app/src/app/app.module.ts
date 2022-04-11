@@ -9,12 +9,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import { ListComponent } from './pages/list/list.component';
+import { AppRoutingModule } from './app-routing.module';
 
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ListComponent,
     ToolbarComponent
   ],
   imports: [
@@ -25,6 +28,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
