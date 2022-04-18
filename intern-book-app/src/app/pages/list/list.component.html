@@ -1,12 +1,12 @@
 <mat-card class="book-register">
   <mat-card-title>書籍登録</mat-card-title>
   <div>
-    <mat-form-field class="book-box" appearance="fill">
+    <mat-form-field class="input-details" appearance="fill">
       <input matInput placeholder="書籍名" type="text">
     </mat-form-field>
   </div>
   <div>
-    <mat-form-field class="book-box" appearance="fill">
+    <mat-form-field class="input-details" appearance="fill">
       <textarea matInput placeholder="あらすじ" type="text"></textarea>
     </mat-form-field>
   </div>
@@ -20,16 +20,6 @@
   </mat-card-actions>
 </mat-card>
 
-<mat-card class="library" *ngFor="let book of bookList">
-  <mat-card-title>{{book.name}}</mat-card-title>
-  <mat-card-content>
-    <p>
-      {{book.detail}}
-    <p>
-      評価:{{book.evaluation}}点
-    </p>
-  </mat-card-content>
-  <mat-card-actions align="end">
-    <button mat-raised-button color="warn">消去</button>
-  </mat-card-actions>
-</mat-card>
+<ng-container *ngFor="let book of bookList">
+  <app-card [book]="book"></app-card>
+</ng-container>
