@@ -14,6 +14,9 @@ import { ListComponent } from './pages/list/list.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardComponent } from './components/card/card.component';
 
+import { FormsModule }   from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +33,7 @@ import { CardComponent } from './components/card/card.component';
     MatFormFieldModule,
     MatButtonModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
