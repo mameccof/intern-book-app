@@ -45,13 +45,16 @@ export class ListComponent implements OnInit {
       alert("全てのデータを入力してください")
       return;
     }
+    //数値であるか
+    if(typeof(this.tmpBook.evaluation) !== "number"){
+      alert("評価点にアルファベットを含めないでください")
+      return;
+    }
     //0~100の範囲内か
     if(this.tmpBook.evaluation > 100 || this.tmpBook.evaluation < 0){
       alert("0以上100以下の数値にしてください")
-      return;
     }
-    //数値であるか
-    if(typeof(this.tmpBook.evaluation) === "number"){
+    else{
       this.bookList.push(
         {
           name: this.tmpBook.name,
@@ -59,9 +62,6 @@ export class ListComponent implements OnInit {
           evaluation: this.tmpBook.evaluation
         }
       )
-    }
-    else{
-      alert("評価点にアルファベットを含めないでください")
     }
 
   }
