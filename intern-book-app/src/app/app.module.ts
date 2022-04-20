@@ -9,16 +9,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import { ListComponent } from './pages/list/list.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { ListComponent } from './pages/list/list.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<mat-card class="library">
+  <mat-card-title>{{book?.name}}</mat-card-title>
+  <mat-card-content>
+    <p>
+      {{book?.detail}}
+    <p>
+      評価:{{book?.evaluation}}点
+    </p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-raised-button color="warn">消去</button>
+  </mat-card-actions>
+</mat-card>
