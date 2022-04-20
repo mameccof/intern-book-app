@@ -4,3 +4,6 @@
 .input-details{
   width: 350px;
 }
+input:invalid{
+  border:red solid 3px;
+}
