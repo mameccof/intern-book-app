@@ -1,23 +1,23 @@
 <mat-card class="book-register">
   <mat-card-title>書籍登録</mat-card-title>
-  <div>
-    <mat-form-field class="input-details" appearance="fill">
-      <input matInput placeholder="書籍名" type="text">
-    </mat-form-field>
-  </div>
-  <div>
-    <mat-form-field class="input-details" appearance="fill">
-      <textarea matInput placeholder="あらすじ" type="text"></textarea>
-    </mat-form-field>
-  </div>
-  <div>
-    <mat-form-field appearance="fill">
-      <input matInput placeholder="評価点" type="text">
-    </mat-form-field>
-  </div>
-  <mat-card-actions align="end">
-    <button mat-raised-button color="primary">追加</button>
-  </mat-card-actions>
+    <div>
+      <mat-form-field class="input-details" appearance="fill">
+        <input matInput placeholder="書籍名" type="text" [(ngModel)]="tmpBook.name" required>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="input-details" appearance="fill">
+        <textarea matInput placeholder="あらすじ" type="text" [(ngModel)]="tmpBook.detail" required></textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="評価点" type="number" [(ngModel)]="tmpBook.evaluation" min="0" max="100" required>
+      </mat-form-field>
+    </div>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="addBook()">追加</button>
+    </mat-card-actions>
 </mat-card>
 
 <ng-container *ngFor="let book of bookList">
