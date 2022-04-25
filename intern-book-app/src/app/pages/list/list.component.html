@@ -20,6 +20,6 @@
     </mat-card-actions>
 </mat-card>
 
-<ng-container *ngFor="let book of bookList">
-  <app-card [book]="book"></app-card>
+<ng-container *ngFor="let book of bookList; index as i">
+  <app-card [book]="book" [bookNumber]="i" (deleteBookEvent)="deleteBook($event)"></app-card>
 </ng-container>
