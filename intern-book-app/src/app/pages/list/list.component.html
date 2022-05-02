@@ -23,3 +23,5 @@
 <ng-container *ngFor="let book of bookList">
   <app-card [book]="book"></app-card>
 </ng-container>
+
+<div *ngIf="bookList.length == 0;">本がありません</div>
