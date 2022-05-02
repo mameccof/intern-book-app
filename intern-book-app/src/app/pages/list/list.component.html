@@ -24,4 +24,6 @@
   <app-card [book]="book"></app-card>
 </ng-container>
 
-<div *ngIf="bookList.length == 0;">本がありません</div>
+<div *ngIf="bookList.length == 0;" class="message-centering">
+  <span>データがありません</span>
+</div>
