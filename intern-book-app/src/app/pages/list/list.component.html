@@ -23,3 +23,7 @@
 <ng-container *ngFor="let book of bookList; index as i">
   <app-card [book]="book" [bookNumber]="i" (deleteBookEvent)="deleteBook($event)"></app-card>
 </ng-container>
+
+<div *ngIf="bookList.length == 0;" class="message-centering">
+  <span>データがありません</span>
+</div>
