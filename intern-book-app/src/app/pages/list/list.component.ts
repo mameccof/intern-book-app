@@ -39,7 +39,7 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addBook(): void{
+  addBook(): void {
     //各ボックスが空欄ではないか
     if(this.tmpBook.name === '' || this.tmpBook.detail === '' || this.tmpBook.evaluation === ''){
       alert("全てのデータを入力してください")
@@ -63,7 +63,10 @@ export class ListComponent implements OnInit {
         }
       )
     }
+  }
 
+  deleteBook(bookIndex: number) {
+    this.bookList.splice(bookIndex,1);
   }
 
 }
