@@ -9,12 +9,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { ListComponent } from './pages/list/list.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardComponent } from './components/card/card.component';
 
 import { FormsModule }   from '@angular/forms';
+import { DialogueComponent } from './components/dialogue/dialogue.component';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { FormsModule }   from '@angular/forms';
     AppComponent,
     ListComponent,
     ToolbarComponent,
-    CardComponent
+    CardComponent,
+    DialogueComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { FormsModule }   from '@angular/forms';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatDialogModule,
     AppRoutingModule,
     FormsModule,
   ],
