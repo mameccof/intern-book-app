@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from 'src/app/types/types';
+import { DialogueComponent } from '../dialogue/dialogue.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-card',
@@ -13,13 +15,25 @@ export class CardComponent implements OnInit {
 
   @Output() deleteBookEvent = new EventEmitter<number>();
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
   sendBookNumber() {
     this.deleteBookEvent.emit(this.bookNumber);
+  }
+
+  openDialogue(){
+    const dialogRef = this.dialog.open(DialogueComponent, {
+      width: '300px',
+    });
+
+    dialogRef.afterClosed().subscribe(isDelete => {
+      if(isDelete){
+        this.sendBookNumber()
+      }
+    });
   }
 
 }
