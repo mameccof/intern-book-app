@@ -14,9 +14,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { ListComponent } from './pages/list/list.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CardComponent } from './components/card/card.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 import { FormsModule }   from '@angular/forms';
 import { DialogueComponent } from './components/dialogue/dialogue.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 
 @NgModule({
@@ -25,7 +28,8 @@ import { DialogueComponent } from './components/dialogue/dialogue.component';
     ListComponent,
     ToolbarComponent,
     CardComponent,
-    DialogueComponent
+    DialogueComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,7 @@ import { DialogueComponent } from './components/dialogue/dialogue.component';
     MatDialogModule,
     AppRoutingModule,
     FormsModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

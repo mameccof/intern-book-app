@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/types/types';
+import { MessageService } from '../../services/message.service';
 
 @Component({
   selector: 'app-list',
@@ -33,12 +34,13 @@ export class ListComponent implements OnInit {
     evaluation: ''
   }
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit(): void {
   }
 
   addBook(): void {
+
     //各ボックスが空欄ではないか
     if(this.tmpBook.name === '' || this.tmpBook.detail === '' || this.tmpBook.evaluation === ''){
       alert("全てのデータを入力してください")
@@ -54,18 +56,19 @@ export class ListComponent implements OnInit {
       alert("0以上100以下の数値にしてください")
     }
     else{
-      this.bookList.push(
-        {
-          name: this.tmpBook.name,
-          detail: this.tmpBook.detail,
-          evaluation: this.tmpBook.evaluation
-        }
-      )
+      this.bookList.push({
+        name: this.tmpBook.name,
+        detail: this.tmpBook.detail,
+        evaluation: this.tmpBook.evaluation
+      });
+      this.messageService.add('本が追加された');
     }
   }
 
   deleteBook(bookIndex: number) {
     this.bookList.splice(bookIndex,1);
+    this.messageService.add('本が削除された');
+
   }
 
 }
